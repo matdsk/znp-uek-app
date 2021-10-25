@@ -1,0 +1,11 @@
+.c-pagination {
+	font-size: 1.2rem;
+	border-top: 1px solid #ccc;
+	padding-top: 1rem;
+}
+
+.c-pagination svg {
+	width: 2rem;
+	height: 2rem;
+	fill: #8d0126;
+}

@@ -1,0 +1,35 @@
+.c-sidebar {
+	background-color: #981a3b;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.c-sidebar a {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+	display: flex;
+	align-items: start;
+	-webkit-transition: letter-spacing 0.7s ease;
+	transition: letter-spacing 0.7s ease;
+}
+.c-sidebar a:hover,
+.c-sidebar a:focus {
+	color: #fff;
+	letter-spacing: 5px;
+}
+.c-sidebar a > span {
+	display: block;
+}
+.c-sidebar a > svg {
+	width: 20px;
+	height: 20px;
+	margin-right: 0.25rem;
+	margin-top: 1px;
+}
+
+.c-sidebar__col {
+	padding-right: 0;
+}

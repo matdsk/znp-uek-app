@@ -1,0 +1,23 @@
+.c-members h1 {
+	color: #8d0126;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.c-members .nav-tabs {
+	border-color: #8d0126;
+}
+
+.c-members .nav-tabs {
+	border-color: #8d0126;
+}
+
+.c-members .nav-link {
+	color: #000;
+}
+
+.c-members .nav-link.active {
+	border-color: #8d0126;
+	border-bottom-color: #fff;
+	color: #8d0126;
+}

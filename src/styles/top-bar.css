@@ -1,0 +1,27 @@
+.c-top-bar {
+	background-color: #8d0126;
+	color: #fff;
+}
+.c-top-bar__logo > img {
+	max-height: 50px;
+	width: 100%;
+}
+
+.c-top-bar__nav ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: end;
+	align-items: center;
+}
+
+.c-top-bar__nav ul li img {
+	width: 36px;
+	height: 22px;
+}
+
+.c-top-bar__nav a {
+	text-decoration: none;
+	color: #fff;
+}

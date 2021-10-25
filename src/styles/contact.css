@@ -1,0 +1,43 @@
+.c-contact h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #8d0126;
+}
+
+.c-contact__address h4,
+.c-contact__form h2 {
+	font-size: 1.5rem;
+}
+
+.c-contact__address p {
+	margin-bottom: 0;
+	font-size: 1.1rem;
+}
+
+.c-contact__street p {
+	font-size: 1rem;
+}
+
+.c-contact__address p svg {
+	transform: scale(1.5);
+	margin-right: 0.5rem;
+	fill: #8d0126;
+}
+
+.c-contact__address p a {
+	text-decoration: none;
+	color: #000;
+}
+
+.c-contact__form button {
+	background-color: #8d0126;
+	border-color: #8d0126;
+}
+
+.c-contact__form button:hover,
+.c-contact__form button:active {
+	background-color: #fff;
+	border-color: #8d0126;
+	color: #8d0126;
+	outline: none;
+}

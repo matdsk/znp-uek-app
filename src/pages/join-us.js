@@ -1,25 +1,33 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
-import { Link } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 
-import '../styles/not-found.css';
+import '../styles/join-us.css';
 
-const NotFoundPage = ({ data, location }) => {
+const JoinUs = ({ data, location }) => {
+	const { t } = useTranslation();
 	return (
 		<Layout
 			location={location}
-			crumbLabel="404"
+			crumbLabel={t('join_us')}
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>
-			<Container className="c-not-found pt-5">
+			<Container className="c-join-us mb-5">
 				<Row>
-					<Col className="d-flex flex-column align-items-center">
-						<h2>404</h2>
-						<h1>Podana strona nie istnieje.</h1>
-						<Link to="/">Powrót do strony głównej</Link>
+					<Col>
+						<h1 className="mb-5">
+							<Trans>join_us</Trans>
+						</h1>
+						<h4 className="mb-3">
+							To, co dzieje się w Twoim miejscu pracy zależy również od Twojego
+							zaangażowania!
+						</h4>
+						<h3>Dołącz do nas!</h3>
+						<h3 className="mb-3">Razem możemy więcej!</h3>
+						<h4>Członkostwo w ZNP</h4>
 					</Col>
 				</Row>
 			</Container>
@@ -27,10 +35,10 @@ const NotFoundPage = ({ data, location }) => {
 	);
 };
 
-export default NotFoundPage;
+export default JoinUs;
 
 export const query = graphql`
-	query NotFoundPage($language: String!) {
+	query JoinUs($language: String!) {
 		locales: allLocale(filter: { language: { eq: $language } }) {
 			edges {
 				node {

@@ -9,6 +9,7 @@ import '../styles/articles.css';
 
 const ArticlePage = ({ data, location }) => {
 	const article = data.strapiArticles;
+
 	return (
 		<Layout
 			location={location}
@@ -48,7 +49,7 @@ export default ArticlePage;
 
 export const query = graphql`
 	query Article($slug: String!, $language: String!) {
-		strapiArticles(Slug: { eq: $slug }, locale: { eq: $language }) {
+		strapiArticles(Slug: { eq: $slug }) {
 			Image {
 				localFile {
 					childImageSharp {

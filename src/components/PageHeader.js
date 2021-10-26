@@ -39,12 +39,12 @@ export default function PageHeader() {
 						<Nav as="ul" className="c-page-header__nav d-xl-none">
 							<Nav.Item as="li">
 								<Link
-									to="/members"
+									to="/articles"
 									className="nav-link"
 									activeClassName="active"
 								>
 									<BsPlay />
-									<Trans>members</Trans>
+									<Trans>articles</Trans>
 								</Link>
 							</Nav.Item>
 							<Nav.Item as="li">
@@ -59,22 +59,22 @@ export default function PageHeader() {
 							</Nav.Item>
 							<Nav.Item as="li">
 								<Link
+									to="/members"
+									className="nav-link"
+									activeClassName="active"
+								>
+									<BsPlay />
+									<Trans>members</Trans>
+								</Link>
+							</Nav.Item>
+							<Nav.Item as="li">
+								<Link
 									to="/contact"
 									className="nav-link"
 									activeClassName="active"
 								>
 									<BsPlay />
 									<Trans>contact</Trans>
-								</Link>
-							</Nav.Item>
-							<Nav.Item as="li">
-								<Link
-									to="/articles"
-									className="nav-link"
-									activeClassName="active"
-								>
-									<BsPlay />
-									<Trans>articles</Trans>
 								</Link>
 							</Nav.Item>
 							<Nav.Item as="li">

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Button, Row, Col } from 'react-bootstrap';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import '../styles/articles.css';
 
@@ -12,7 +13,9 @@ const RecentArticles = ({ data }) => {
 		<div className="c-article c-recent-articles">
 			<Row>
 				<Col className="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4">
-					<h2 className="mb-3 mb-md-0">Najnowsze artykuły</h2>
+					<h2 className="mb-3 mb-md-0">
+						<Trans>recent_news</Trans>
+					</h2>
 					<Button
 						variant="outline-primary"
 						href="/articles"
@@ -43,9 +46,9 @@ const RecentArticles = ({ data }) => {
 						</div>
 						<Link
 							to={'/article/' + article.node.Slug}
-							className="c-recent-articles__link"
+							className="c-recent-articles__link mt-2 mt-mb-0"
 						>
-							Czytaj dalej
+							<Trans>read_more</Trans>
 						</Link>
 					</Col>
 				</Row>

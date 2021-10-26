@@ -1,9 +1,11 @@
 {
-	"articles": "Articles",
+	"articles": "News",
 	"gallery": "Gallery",
 	"members": "Members",
 	"contact": "Contact",
 	"download_files": "Download files",
 	"join_us": "Join us!",
-	"uek_main_page": "UEK main page"
+	"uek_main_page": "UEK main page",
+	"recent_news": "Recent news",
+	"read_more": "Read more"
 }

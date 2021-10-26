@@ -26,7 +26,7 @@ const Contact = ({ data, location }) => {
 					</Col>
 				</Row>
 				<Row>
-					<Col md={6} className="c-contact__address">
+					<Col md={6} className="c-contact__address mb-5 mb-md-0">
 						{contactData.map((contact) => (
 							<div key={contact.node.id}>
 								<div className="mb-3 c-contact__street">

@@ -17,3 +17,9 @@
 .c-slider__col {
 	padding-left: 0;
 }
+
+@media (max-width: 576px) {
+	.c-slider__col {
+		padding-right: 0;
+	}
+}

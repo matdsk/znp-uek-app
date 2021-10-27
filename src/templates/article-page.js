@@ -36,7 +36,7 @@ const ArticlePage = ({ data, location }) => {
 							className="c-article-page__img"
 						/>
 					</Col>
-					<Col xl={6}>
+					<Col xl={6} className="c-article__wyswig">
 						<ReactMarkdown>{article.Text}</ReactMarkdown>
 					</Col>
 				</Row>

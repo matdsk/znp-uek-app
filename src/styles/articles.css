@@ -32,6 +32,10 @@
 	color: #8d0126;
 }
 
+.c-recent-articles__btn svg {
+	margin-left: 1rem;
+}
+
 .c-recent-articles__btn:hover,
 .c-recent-articles__btn:active {
 	background-color: #8d0126;
@@ -55,6 +59,11 @@
 	display: inline-flex;
 	padding-bottom: 3px;
 	overflow: hidden;
+}
+
+.c-recent-articles__link > svg,
+.c-article-list__link > svg {
+	margin-left: 0.5rem;
 }
 
 .c-recent-articles__link:before,
@@ -92,9 +101,16 @@
 	}
 }
 
+.c-article__wyswig img {
+	max-width: 100%;
+}
+
 @media (max-width: 576px) {
 	.c-article-page__img {
 		max-height: 250px;
+	}
+	.c-recent-articles__title h2 {
+		font-size: 2rem;
 	}
 	.c-article h2,
 	.c-article h1 {

@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Button, Row, Col } from 'react-bootstrap';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import { IoArrowForwardOutline } from 'react-icons/io5';
+import { BsArrowRightShort } from 'react-icons/bs';
 
 import '../styles/articles.css';
 
@@ -23,7 +24,7 @@ const RecentArticles = ({ data }) => {
 						className="c-recent-articles__btn"
 					>
 						<Trans>see_all_news</Trans>
-						<IoArrowForwardOutline></IoArrowForwardOutline>
+						<IoArrowForwardOutline />
 					</Button>{' '}
 				</Col>
 			</Row>
@@ -52,6 +53,7 @@ const RecentArticles = ({ data }) => {
 								className="c-recent-articles__link mt-2 mt-mb-0"
 							>
 								<Trans>read_more</Trans>
+								<BsArrowRightShort />
 							</Link>
 						</Col>
 					</Row>

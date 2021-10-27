@@ -1,5 +1,5 @@
 .c-article h2,
-.c-recent-articles__title h2,
+.c-recent-articles__title,
 .c-article h1 {
 	color: #8d0126;
 	font-size: 2rem;
@@ -56,14 +56,15 @@
 	color: #000;
 	font-weight: 600;
 	text-decoration: none;
-	display: inline-flex;
 	padding-bottom: 3px;
 	overflow: hidden;
 }
 
 .c-recent-articles__link > svg,
 .c-article-list__link > svg {
-	margin-left: 0.5rem;
+	margin-left: 0.25rem;
+	width: 20px;
+	height: 20px;
 }
 
 .c-recent-articles__link:before,
@@ -109,7 +110,7 @@
 	.c-article-page__img {
 		max-height: 250px;
 	}
-	.c-recent-articles__title h2 {
+	.c-recent-articles__title {
 		font-size: 2rem;
 	}
 	.c-article h2,

@@ -25,34 +25,35 @@ const RecentArticles = ({ data }) => {
 					</Button>{' '}
 				</Col>
 			</Row>
-			{articles.map((article) => (
-				<Row key={article.node.id} className="mb-4">
-					<Col lg={5} xl={4} className="mb-3 mb-lg-0">
-						<GatsbyImage
-							image={getImage(article.node.Image.localFile)}
-							alt={article.node.Title}
-							layout="fixed"
-							className="c-recent-articles__img"
-						/>
-					</Col>
-					<Col
-						lg={7}
-						xl={8}
-						className="d-flex flex-column justify-content-between pt-1"
-					>
-						<div className="">
-							<h3 className="mb-md-3">{article.node.Title}</h3>
-							<span>{removeMd(article.node.Text.slice(0, 250))}...</span>
-						</div>
-						<Link
-							to={'/article/' + article.node.Slug}
-							className="c-recent-articles__link mt-2 mt-mb-0"
+			{data &&
+				articles.map((article) => (
+					<Row key={article.node.id} className="mb-4">
+						<Col lg={5} xl={4} className="mb-3 mb-lg-0">
+							<GatsbyImage
+								image={getImage(article.node.Image.localFile)}
+								alt={article.node.Title}
+								layout="fixed"
+								className="c-recent-articles__img"
+							/>
+						</Col>
+						<Col
+							lg={7}
+							xl={8}
+							className="d-flex flex-column justify-content-between pt-1"
 						>
-							<Trans>read_more</Trans>
-						</Link>
-					</Col>
-				</Row>
-			))}
+							<div className="">
+								<h3 className="mb-md-3">{article.node.Title}</h3>
+								<span>{removeMd(article.node.Text.slice(0, 250))}...</span>
+							</div>
+							<Link
+								to={'/article/' + article.node.Slug}
+								className="c-recent-articles__link mt-2 mt-mb-0"
+							>
+								<Trans>read_more</Trans>
+							</Link>
+						</Col>
+					</Row>
+				))}
 		</div>
 	);
 };

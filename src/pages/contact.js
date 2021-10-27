@@ -27,31 +27,32 @@ const Contact = ({ data, location }) => {
 				</Row>
 				<Row>
 					<Col md={6} className="c-contact__address mb-5 mb-md-0">
-						{contactData.map((contact) => (
-							<div key={contact.node.id}>
-								<div className="mb-3 c-contact__street">
-									<h4>Siedziba związku:</h4>
-									<p>
-										{contact.node.Address} {contact.node.ZipCode}{' '}
-										{contact.node.City}
-									</p>
-									<p>{contact.node.AddressDescription}</p>
-								</div>
-								<div className="mb-3">
-									{contact.node.PhoneNumber.map((phone) => (
-										<p key={phone.id}>
-											<AiOutlinePhone /> {phone.Number}
+						{data &&
+							contactData.map((contact) => (
+								<div key={contact.node.id}>
+									<div className="mb-3 c-contact__street">
+										<h4>Siedziba związku:</h4>
+										<p>
+											{contact.node.Address} {contact.node.ZipCode}{' '}
+											{contact.node.City}
 										</p>
-									))}
+										<p>{contact.node.AddressDescription}</p>
+									</div>
+									<div className="mb-3">
+										{contact.node.PhoneNumber.map((phone) => (
+											<p key={phone.id}>
+												<AiOutlinePhone /> {phone.Number}
+											</p>
+										))}
+									</div>
+									<p>
+										<AiOutlineMail />{' '}
+										<a href={'mailto:' + contact.node.Mail}>
+											{contact.node.Mail}
+										</a>
+									</p>
 								</div>
-								<p>
-									<AiOutlineMail />{' '}
-									<a href={'mailto:' + contact.node.Mail}>
-										{contact.node.Mail}
-									</a>
-								</p>
-							</div>
-						))}
+							))}
 					</Col>
 					<Col md={6} className="c-contact__form">
 						<h2 className="mb-3">Skontaktuj się z nami:</h2>

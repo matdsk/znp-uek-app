@@ -28,7 +28,7 @@ export default function PageFooter({ data }) {
 						</div>
 					</Col>
 					<Col md={4} className="c-page-footer__contact my-4 my-md-0">
-						{contacts &&
+						{data &&
 							contacts.map((contact) => (
 								<div key={contact.node.id}>
 									<div className="mb-3 c-page-footer__address">

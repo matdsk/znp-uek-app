@@ -52,7 +52,7 @@ module.exports = {
 			resolve: `gatsby-source-strapi`,
 			options: {
 				apiURL: process.env.DEPLOY_URL
-					? 'https://znp-uek-api.herokuapp.com'
+					? 'https://uek-znp-api.herokuapp.com'
 					: 'http://localhost:1337',
 				queryLimit: 3000, // Defaults to 100
 				collectionTypes: [

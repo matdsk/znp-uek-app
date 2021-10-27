@@ -19,35 +19,36 @@ export default function Gallery({ data, pageContext, location }) {
 			contactData={data.allStrapiContacts}
 		>
 			<Container className="c-gallery mb-5">
-				{data.allStrapiGalleries.edges.map((galleries) => (
-					<div className="c-gallery__card" key={galleries.node.id}>
-						<h3>{galleries.node.Title}</h3>
-						<hr className="c-gallery__hr"></hr>
-						<p>{galleries.node.Description}</p>
-						<div className="c-gallery__grid">
-							{galleries.node.Images.map((gallery) => (
-								<div
-									className="c-gallery__img-wrap"
-									key={gallery.id}
-									onClick={() => setSelectedImg(gallery.localFile)}
-								>
-									<GatsbyImage
-										image={getImage(gallery.localFile)}
-										alt=""
-										layout="fixed"
-										className="c-gallery__img"
-									/>
-								</div>
-							))}
+				{data &&
+					data.allStrapiGalleries.edges.map((galleries) => (
+						<div className="c-gallery__card" key={galleries.node.id}>
+							<h3>{galleries.node.Title}</h3>
+							<hr className="c-gallery__hr"></hr>
+							<p>{galleries.node.Description}</p>
+							<div className="c-gallery__grid">
+								{galleries.node.Images.map((gallery) => (
+									<div
+										className="c-gallery__img-wrap"
+										key={gallery.id}
+										onClick={() => setSelectedImg(gallery.localFile)}
+									>
+										<GatsbyImage
+											image={getImage(gallery.localFile)}
+											alt=""
+											layout="fixed"
+											className="c-gallery__img"
+										/>
+									</div>
+								))}
+							</div>
+							{selectedImg && (
+								<Modal
+									selectedImg={selectedImg}
+									setSelectedImg={setSelectedImg}
+								/>
+							)}
 						</div>
-						{selectedImg && (
-							<Modal
-								selectedImg={selectedImg}
-								setSelectedImg={setSelectedImg}
-							/>
-						)}
-					</div>
-				))}
+					))}
 				<Pagination
 					currentPage={pageContext.currentPage}
 					pageCount={pageContext.pageCount}

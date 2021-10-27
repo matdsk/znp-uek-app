@@ -17,7 +17,7 @@ const Home = ({ data, location }) => {
 			contactData={data.allStrapiContacts}
 		>
 			<Container>
-				<div className="row mb-5 c-main__wrapper">
+				<div className="row mb-4 mb-sm-5 c-main__wrapper">
 					<div className="d-none d-xl-block col-3 c-sidebar__col">
 						<Sidebar />
 					</div>
@@ -25,10 +25,10 @@ const Home = ({ data, location }) => {
 						<Slider data={data.allStrapiSliders} />
 					</div>
 				</div>
-				<div className="mb-5">
+				<div className="mb-4 mb-sm-5">
 					<Seo data={data.allStrapiSeos} />
 				</div>
-				<div className="mb-5">
+				<div className="mb-4 mb-sm-5">
 					<RecentArticles data={data.allStrapiArticles} />
 				</div>
 			</Container>

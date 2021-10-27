@@ -59,19 +59,23 @@ const Contact = ({ data, location }) => {
 						<Form>
 							<Form.Group className="mb-3" controlId="formBasicEmail">
 								<Form.Label>Adres mailowy</Form.Label>
-								<Form.Control type="email" placeholder="adres e-mail" />
+								<Form.Control
+									type="email"
+									placeholder="adres e-mail"
+									required
+								/>
 							</Form.Group>
 
 							<Form.Group className="mb-3" controlId="formBasicTitle">
 								<Form.Label>Temat</Form.Label>
-								<Form.Control type="text" placeholder="Temat" />
+								<Form.Control type="text" placeholder="Temat" required />
 							</Form.Group>
 							<Form.Group
 								className="mb-3"
 								controlId="exampleForm.ControlTextarea1"
 							>
 								<Form.Label>Treść</Form.Label>
-								<Form.Control as="textarea" rows={3} />
+								<Form.Control as="textarea" rows={3} required />
 							</Form.Group>
 							<Button variant="primary" type="submit" className="px-5">
 								Wyślij

@@ -76,13 +76,13 @@ const Members = ({ location, data }) => {
 										<Row key={member.id} className="p-3">
 											<Col sm={6}>
 												{member.rola && (
-													<span className="d-block mr-3">{member.rola}</span>
+													<span className="c-member__role">{member.rola}</span>
 												)}
-												<span>{member.nazwa}</span>
+												<span className="c-member__name">{member.nazwa}</span>
 											</Col>
 											<Col sm={6}>
 												{member.telefon != null && (
-													<div className="d-flex justify-content-end align-items-center">
+													<div className="d-flex justify-content-end align-items-center c-member__link">
 														<AiOutlinePhone />
 														<a
 															href={
@@ -99,7 +99,7 @@ const Members = ({ location, data }) => {
 											</Col>
 											<Col sm={6}>
 												{member.email != null && (
-													<div className="d-flex justify-content-end align-items-center">
+													<div className="d-flex justify-content-end align-items-center c-member__link">
 														<AiOutlineMail />
 														<a href={'mailto:' + member.email}>
 															{member.email}

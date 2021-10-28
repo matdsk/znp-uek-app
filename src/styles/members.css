@@ -21,3 +21,22 @@
 	border-bottom-color: #fff;
 	color: #8d0126;
 }
+
+.c-member__role {
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+
+.c-member__name {
+	font-weight: 600;
+}
+
+.c-member__link a {
+	text-decoration: none;
+}
+
+.c-member__link svg {
+	fill: #8d0126;
+	margin-right: 0.5rem;
+	transform: scale(1.25);
+}

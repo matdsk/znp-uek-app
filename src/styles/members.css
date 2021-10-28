@@ -43,8 +43,9 @@
 }
 
 .c-member__hr {
-	background-color: #8d0126;
-	opacity: 0.85;
+	margin: 0.25rem 0 0 0;
+	background-color: #000;
+	opacity: 0.55;
 }
 
 .c-member__hr:not([size]) {

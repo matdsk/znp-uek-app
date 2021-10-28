@@ -73,10 +73,9 @@ const Members = ({ location, data }) => {
 								<div className="d-sm-none">
 									{members.node.Member.map((member) => (
 										<Row key={member.id}>
-											<Col className="d-flex align-items-center">
-												{member.rola} {member.nazwa}
-											</Col>
-											<Col className="d-flex align-items-center">
+											<Col xs={6}>{member.rola}</Col>
+											<Col xs={6}>{member.nazwa}</Col>
+											<Col xs={6}>
 												{member.telefon != null && (
 													<a
 														href={
@@ -89,6 +88,8 @@ const Members = ({ location, data }) => {
 														{member.telefon}
 													</a>
 												)}
+											</Col>
+											<Col xs={6}>
 												{member.email != null && (
 													<a href={'mailto:' + member.email}>{member.email}</a>
 												)}

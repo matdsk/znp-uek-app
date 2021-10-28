@@ -73,7 +73,7 @@ const Members = ({ location, data }) => {
 								</Table>
 								<div className="d-sm-none">
 									{members.node.Member.map((member) => (
-										<Row key={member.id} className="p-3">
+										<Row key={member.id} className="px-3 py-2">
 											<Col sm={6}>
 												{member.rola && (
 													<span className="c-member__role">{member.rola}</span>
@@ -107,6 +107,7 @@ const Members = ({ location, data }) => {
 													</div>
 												)}
 											</Col>
+											<hr className="c-member__hr"></hr>
 										</Row>
 									))}
 								</div>

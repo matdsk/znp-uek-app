@@ -43,9 +43,9 @@
 }
 
 .c-member__hr {
-	margin: 0.25rem 0 0 0;
+	margin: 0.25rem 0.5rem 0 0.5rem;
 	background-color: #000;
-	opacity: 0.55;
+	opacity: 0.15;
 }
 
 .c-member__hr:not([size]) {

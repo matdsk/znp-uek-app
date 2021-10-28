@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import { Container, Col, Row, Tabs, Tab, Table } from 'react-bootstrap';
+import { AiOutlinePhone, AiOutlineMail } from 'react-icons/ai';
 
 import '../styles/members.css';
 
@@ -72,10 +73,12 @@ const Members = ({ location, data }) => {
 								</Table>
 								<div className="d-sm-none">
 									{members.node.Member.map((member) => (
-										<Row key={member.id}>
-											<Col xs={6}>{member.rola}</Col>
-											<Col xs={6}>{member.nazwa}</Col>
-											<Col xs={6}>
+										<Row key={member.id} className="p-3">
+											<Col sm={6}>
+												<span className="mr-3">{member.rola}</span>
+												<span>{member.nazwa}</span>
+											</Col>
+											<Col sm={6} className="d-flex justify-content-around">
 												{member.telefon != null && (
 													<a
 														href={
@@ -85,13 +88,13 @@ const Members = ({ location, data }) => {
 																.replace(/-/g, '')
 														}
 													>
-														{member.telefon}
+														<AiOutlinePhone /> {member.telefon}
 													</a>
 												)}
-											</Col>
-											<Col xs={6}>
 												{member.email != null && (
-													<a href={'mailto:' + member.email}>{member.email}</a>
+													<a href={'mailto:' + member.email}>
+														<AiOutlineMail /> {member.email}
+													</a>
 												)}
 											</Col>
 										</Row>

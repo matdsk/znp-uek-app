@@ -80,7 +80,7 @@ const Members = ({ location, data }) => {
 												)}
 												<span className="c-member__name">{member.nazwa}</span>
 											</Col>
-											<Col sm={6}>
+											<Col sm={6} className="py-1">
 												{member.telefon != null && (
 													<div className="d-flex justify-content-end align-items-center c-member__link">
 														<AiOutlinePhone />
@@ -97,7 +97,7 @@ const Members = ({ location, data }) => {
 													</div>
 												)}
 											</Col>
-											<Col sm={6}>
+											<Col sm={6} className="py-1">
 												{member.email != null && (
 													<div className="d-flex justify-content-end align-items-center c-member__link">
 														<AiOutlineMail />

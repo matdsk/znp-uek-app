@@ -75,26 +75,36 @@ const Members = ({ location, data }) => {
 									{members.node.Member.map((member) => (
 										<Row key={member.id} className="p-3">
 											<Col sm={6}>
-												<span className="mr-3">{member.rola}</span>
+												{member.rola && (
+													<span className="d-block mr-3">{member.rola}</span>
+												)}
 												<span>{member.nazwa}</span>
 											</Col>
-											<Col sm={6} className="d-flex justify-content-around">
+											<Col sm={6}>
 												{member.telefon != null && (
-													<a
-														href={
-															'tel:+48' +
-															member.telefon
-																.replace(/\s/g, '')
-																.replace(/-/g, '')
-														}
-													>
-														<AiOutlinePhone /> {member.telefon}
-													</a>
+													<div className="d-flex justify-content-end align-items-center">
+														<AiOutlinePhone />
+														<a
+															href={
+																'tel:+48' +
+																member.telefon
+																	.replace(/\s/g, '')
+																	.replace(/-/g, '')
+															}
+														>
+															{member.telefon}
+														</a>
+													</div>
 												)}
+											</Col>
+											<Col sm={6}>
 												{member.email != null && (
-													<a href={'mailto:' + member.email}>
-														<AiOutlineMail /> {member.email}
-													</a>
+													<div className="d-flex justify-content-end align-items-center">
+														<AiOutlineMail />
+														<a href={'mailto:' + member.email}>
+															{member.email}
+														</a>
+													</div>
 												)}
 											</Col>
 										</Row>

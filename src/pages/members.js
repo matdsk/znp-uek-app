@@ -44,7 +44,10 @@ const Members = ({ location, data }) => {
 												<td>{member.rola}</td>
 												<td>{member.nazwa}</td>
 												{member.telefon != null && (
-													<td colSpan={member.email === null ? '2' : '1'}>
+													<td
+														colSpan={member.email === null ? '2' : '1'}
+														className="c-member__link"
+													>
 														<a
 															href={
 																'tel:+48' +
@@ -58,7 +61,10 @@ const Members = ({ location, data }) => {
 													</td>
 												)}
 												{member.email != null && (
-													<td colSpan={member.telefon === null ? '2' : '1'}>
+													<td
+														colSpan={member.telefon === null ? '2' : '1'}
+														className="c-member__link"
+													>
 														<a href={'mailto:' + member.email}>
 															{member.email}
 														</a>

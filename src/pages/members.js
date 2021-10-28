@@ -29,7 +29,7 @@ const Members = ({ location, data }) => {
 								title={members.node.Nazwa}
 								key={members.node.id}
 							>
-								<Table striped bordered hover responsive="md">
+								<Table striped bordered hover className="d-none d-sm-block">
 									<thead>
 										<tr>
 											<th>#</th>
@@ -67,6 +67,44 @@ const Members = ({ location, data }) => {
 													<td colSpan="2"></td>
 												)}
 											</tr>
+										))}
+									</tbody>
+								</Table>
+								<Table striped bordered hover className="d-sm-none">
+									<tbody>
+										{members.node.Member.map((member) => (
+											<div key={member.id}>
+												<tr>
+													<td>{member.rola}</td>
+													<td>{member.nazwa}</td>
+												</tr>
+												<tr>
+													{member.telefon != null && (
+														<td colSpan={member.email === null ? '2' : '1'}>
+															<a
+																href={
+																	'tel:+48' +
+																	member.telefon
+																		.replace(/\s/g, '')
+																		.replace(/-/g, '')
+																}
+															>
+																{member.telefon}
+															</a>
+														</td>
+													)}
+													{member.email != null && (
+														<td colSpan={member.telefon === null ? '2' : '1'}>
+															<a href={'mailto:' + member.email}>
+																{member.email}
+															</a>
+														</td>
+													)}
+													{member.email === null && member.telefon === null && (
+														<td colSpan="2"></td>
+													)}
+												</tr>
+											</div>
 										))}
 									</tbody>
 								</Table>

@@ -30,11 +30,22 @@
 }
 .c-breadcrumb .breadcrumb__separator::after {
 	content: '';
-	display: block;
+	display: none;
 	color: #8d0126;
 	background: url('../images/next.png') no-repeat;
 	width: 1.5rem;
 	height: 1.5rem;
 	float: right;
 	margin-right: 0.5rem;
+}
+
+.c-breadcrumb__item {
+	display: none;
+}
+
+.c-breadcrumb__item:not(:last-child),
+.c-breadcrumb__item:not(:first-child),
+.c-breadcrumb__item:not(:first-child) > .breadcrumb__separator::after,
+.c-breadcrumb__item:not(:first-child) > .breadcrumb__separator::after {
+	display: block;
 }

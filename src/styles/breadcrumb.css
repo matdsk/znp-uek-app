@@ -28,13 +28,13 @@
 	margin-left: 0.5rem;
 }
 
-.c-breadcrumb__item:last-child,
-.c-breadcrumb__item:first-child {
-	display: flex;
+.c-breadcrumb .c-breadcrumb__item:last-child,
+.c-breadcrumb .c-breadcrumb__item:first-child {
+	display: flex !important;
 	align-items: center;
 }
-.c-breadcrumb__item:first-child > .breadcrumb__separator::after,
-.c-breadcrumb__item:first-child > .breadcrumb__separator::after {
+.c-breadcrumb .c-breadcrumb__item:first-child .breadcrumb__separator::after,
+.c-breadcrumb .c-breadcrumb__item:first-child .breadcrumb__separator::after {
 	content: '';
 	display: block;
 	color: #8d0126;

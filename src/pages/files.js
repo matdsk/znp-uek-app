@@ -4,7 +4,8 @@ import Layout from '../components/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
-import { AiFillFileText, AiOutlineDownload } from 'react-icons/ai';
+import { AiFillFileText } from 'react-icons/ai';
+import { MdFileDownload } from 'react-icons/md';
 import '../styles/files.css';
 
 const Files = ({ data, location }) => {
@@ -27,7 +28,7 @@ const Files = ({ data, location }) => {
 				</Row>
 				<Row>
 					{downloadFiles.map((fileGroup) => (
-						<Col key={fileGroup.node.id}>
+						<Col key={fileGroup.node.id} className="px-4">
 							<div className="d-flex align-items-center c-files__group">
 								<AiFillFileText />
 								<h2>{fileGroup.node.Name}</h2>
@@ -36,7 +37,8 @@ const Files = ({ data, location }) => {
 								{fileGroup.node.Files.map((file) => (
 									<ListGroup.Item key={file.id}>
 										<a className="c-files__link" href={file.url}>
-											<AiOutlineDownload /> {file.name}
+											<MdFileDownload />
+											{file.name}
 										</a>
 									</ListGroup.Item>
 								))}

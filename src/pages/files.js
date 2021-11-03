@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
+import ListGroup from 'react-bootstrap/ListGroup';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { AiFillFileText } from 'react-icons/ai';
 import '../styles/files.css';

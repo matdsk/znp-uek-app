@@ -56,12 +56,8 @@ const Contact = ({ data, location }) => {
 					</Col>
 					<Col md={6} className="c-contact__form">
 						<h2 className="mb-3">Skontaktuj się z nami:</h2>
-						<Form
-							method="POST"
-							data-netlify="true"
-							data-netlify-recaptcha="true"
-						>
-							<Form.Group className="mb-3" controlId="formEmail">
+						<Form name="contact" method="POST" data-netlify="true">
+							<Form.Group className="mb-3" controlId="email">
 								<Form.Label>
 									<Trans>email</Trans>
 								</Form.Label>
@@ -72,7 +68,7 @@ const Contact = ({ data, location }) => {
 									required
 								/>
 							</Form.Group>
-							<Form.Group className="mb-3" controlId="formTitle">
+							<Form.Group className="mb-3" controlId="subject">
 								<Form.Label>
 									<Trans>subject</Trans>
 								</Form.Label>
@@ -83,7 +79,7 @@ const Contact = ({ data, location }) => {
 									required
 								/>
 							</Form.Group>
-							<Form.Group className="mb-3" controlId="formMessage">
+							<Form.Group className="mb-3" controlId="message">
 								<Form.Label>
 									<Trans>message</Trans>
 								</Form.Label>

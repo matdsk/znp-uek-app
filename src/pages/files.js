@@ -3,12 +3,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
-
+import { AiFillFileText } from 'react-icons/ai';
 import '../styles/files.css';
 
 const Files = ({ data, location }) => {
 	const { t } = useTranslation();
-	console.log(data);
+	const downloadFiles = data.allStrapiDownloadFiles.edges;
 	return (
 		<Layout
 			location={location}
@@ -22,10 +22,22 @@ const Files = ({ data, location }) => {
 						<h1 className="mb-5">
 							<Trans>download_files</Trans>
 						</h1>
-						<h3 className="d-flex justify-content-center py-3">
-							Brak plików do pobrania.
-						</h3>
 					</Col>
+					{downloadFiles.map((fileGroup) => (
+						<Col key={fileGroup.node.id}>
+							<div className="d-flex align-items-center">
+								<AiFillFileText />
+								<h2>{fileGroup.node.Name}</h2>
+							</div>
+							<ListGroup variant="flush" horizontal>
+								{fileGroup.node.Files.map((file) => (
+									<ListGroup.Item key={file.id}>
+										<a href={file.url}>{file.name}</a>
+									</ListGroup.Item>
+								))}
+							</ListGroup>
+						</Col>
+					))}
 				</Row>
 			</Container>
 		</Layout>
@@ -66,6 +78,11 @@ export const query = graphql`
 				node {
 					id
 					Name
+					Files {
+						id
+						url
+						name
+					}
 				}
 			}
 		}

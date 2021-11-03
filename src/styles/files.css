@@ -3,3 +3,14 @@
 	font-size: 2rem;
 	font-weight: 700;
 }
+
+.c-files__group h2 {
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+
+.c-files__group svg {
+	transform: scale(2);
+	margin-right: 0.5rem;
+	fill: #8d0126;
+}

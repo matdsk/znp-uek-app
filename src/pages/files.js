@@ -24,9 +24,11 @@ const Files = ({ data, location }) => {
 							<Trans>download_files</Trans>
 						</h1>
 					</Col>
+				</Row>
+				<Row>
 					{downloadFiles.map((fileGroup) => (
 						<Col key={fileGroup.node.id}>
-							<div className="d-flex align-items-center">
+							<div className="d-flex align-items-center c-files__group">
 								<AiFillFileText />
 								<h2>{fileGroup.node.Name}</h2>
 							</div>

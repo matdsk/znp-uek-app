@@ -1,12 +1,12 @@
 module.exports = {
 	siteMetadata: {
-		siteUrl: 'https://www.yourdomain.tld',
+		siteUrl: 'https://znp-uek-app.netlify.app',
 		title: 'znp uek app',
 	},
 	plugins: [
-		'gatsby-plugin-image',
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
+		`gatsby-plugin-image`,
+		`gatsby-plugin-sharp`,
+		`gatsby-transformer-sharp`,
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -14,14 +14,6 @@ module.exports = {
 				path: `${__dirname}/src/images/`,
 			},
 			__key: 'images',
-		},
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: 'files',
-				path: `${__dirname}/src/files/`,
-			},
-			__key: 'files',
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -52,8 +44,8 @@ module.exports = {
 			resolve: `gatsby-source-strapi`,
 			options: {
 				apiURL: process.env.DEPLOY_URL
-					? 'https://uek-znp-api.herokuapp.com'
-					: 'http://localhost:1337',
+					? `https://uek-znp-api.herokuapp.com`
+					: `http://localhost:1337`,
 				queryLimit: 3000, // Defaults to 100
 				collectionTypes: [
 					{
@@ -78,6 +70,10 @@ module.exports = {
 					},
 					{
 						name: `contacts`,
+						api: { qs: { _locale: `all` } },
+					},
+					{
+						name: `download-files`,
 						api: { qs: { _locale: `all` } },
 					},
 				],

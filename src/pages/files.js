@@ -8,6 +8,7 @@ import '../styles/files.css';
 
 const Files = ({ data, location }) => {
 	const { t } = useTranslation();
+	console.log(data);
 	return (
 		<Layout
 			location={location}
@@ -44,19 +45,11 @@ export const query = graphql`
 				}
 			}
 		}
-		allStrapiContacts(filter: { locale: { eq: $language } }) {
+		allStrapiDownloadFiles(filter: { locale: { eq: $language } }) {
 			edges {
 				node {
-					Address
-					AddressDescription
-					City
-					Mail
-					PhoneNumber {
-						Number
-						id
-					}
 					id
-					ZipCode
+					Name
 				}
 			}
 		}

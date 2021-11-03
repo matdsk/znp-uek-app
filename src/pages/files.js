@@ -45,6 +45,22 @@ export const query = graphql`
 				}
 			}
 		}
+		allStrapiContacts(filter: { locale: { eq: $language } }) {
+			edges {
+				node {
+					Address
+					AddressDescription
+					City
+					Mail
+					PhoneNumber {
+						Number
+						id
+					}
+					id
+					ZipCode
+				}
+			}
+		}
 		allStrapiDownloadFiles(filter: { locale: { eq: $language } }) {
 			edges {
 				node {

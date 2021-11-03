@@ -61,31 +61,20 @@ const Contact = ({ data, location }) => {
 								<Form.Label>
 									<Trans>email</Trans>
 								</Form.Label>
-								<Form.Control
-									type="email"
-									name="email"
-									placeholder="e-mail"
-									required
-								/>
+								<Form.Control type="email" name="email" placeholder="e-mail" />
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="subject">
 								<Form.Label>
 									<Trans>subject</Trans>
 								</Form.Label>
-								<Form.Control
-									type="text"
-									name="subject"
-									placeholder="Temat"
-									required
-								/>
+								<Form.Control type="text" name="subject" placeholder="Temat" />
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="message">
 								<Form.Label>
 									<Trans>message</Trans>
 								</Form.Label>
-								<Form.Control as="textarea" name="message" rows={3} required />
+								<Form.Control as="textarea" name="message" rows={3} />
 							</Form.Group>
-							<div data-netlify-recaptcha="true"></div>
 							<Button variant="primary" type="submit" className="px-5">
 								<Trans>send</Trans>
 							</Button>

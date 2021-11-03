@@ -56,29 +56,42 @@ const Contact = ({ data, location }) => {
 					</Col>
 					<Col md={6} className="c-contact__form">
 						<h2 className="mb-3">Skontaktuj się z nami:</h2>
-						<Form>
-							<Form.Group className="mb-3" controlId="formBasicEmail">
-								<Form.Label>Adres mailowy</Form.Label>
+						<Form
+							method="POST"
+							data-netlify="true"
+							data-netlify-recaptcha="true"
+						>
+							<Form.Group className="mb-3" controlId="formEmail">
+								<Form.Label>
+									<Trans>email</Trans>
+								</Form.Label>
 								<Form.Control
 									type="email"
-									placeholder="adres e-mail"
+									name="email"
+									placeholder="e-mail"
 									required
 								/>
 							</Form.Group>
-
-							<Form.Group className="mb-3" controlId="formBasicTitle">
-								<Form.Label>Temat</Form.Label>
-								<Form.Control type="text" placeholder="Temat" required />
+							<Form.Group className="mb-3" controlId="formTitle">
+								<Form.Label>
+									<Trans>subject</Trans>
+								</Form.Label>
+								<Form.Control
+									type="text"
+									name="subject"
+									placeholder="Temat"
+									required
+								/>
 							</Form.Group>
-							<Form.Group
-								className="mb-3"
-								controlId="exampleForm.ControlTextarea1"
-							>
-								<Form.Label>Treść</Form.Label>
-								<Form.Control as="textarea" rows={3} required />
+							<Form.Group className="mb-3" controlId="formMessage">
+								<Form.Label>
+									<Trans>message</Trans>
+								</Form.Label>
+								<Form.Control as="textarea" name="message" rows={3} required />
 							</Form.Group>
+							<div data-netlify-recaptcha="true"></div>
 							<Button variant="primary" type="submit" className="px-5">
-								Wyślij
+								<Trans>send</Trans>
 							</Button>
 						</Form>
 					</Col>

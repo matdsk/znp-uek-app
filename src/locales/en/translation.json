@@ -8,5 +8,9 @@
 	"uek_main_page": "UEK main page",
 	"recent_news": "Recent news",
 	"read_more": "Read more",
-	"see_all_news": "See all news"
+	"see_all_news": "See all news",
+	"send": "Send",
+	"email": "Email address",
+	"subject": "Subject",
+	"message": "Message"
 }

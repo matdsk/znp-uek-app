@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
-import { AiFillFileText } from 'react-icons/ai';
+import { AiFillFileText, AiOutlineDownload } from 'react-icons/ai';
 import '../styles/files.css';
 
 const Files = ({ data, location }) => {
@@ -35,7 +35,9 @@ const Files = ({ data, location }) => {
 							<ListGroup variant="flush" horizontal>
 								{fileGroup.node.Files.map((file) => (
 									<ListGroup.Item key={file.id}>
-										<a href={file.url}>{file.name}</a>
+										<a className="c-files__link" href={file.url}>
+											<AiOutlineDownload /> {file.name}
+										</a>
 									</ListGroup.Item>
 								))}
 							</ListGroup>

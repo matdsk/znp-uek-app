@@ -9,7 +9,7 @@ import '../styles/join-us.css';
 
 const JoinUs = ({ data, location }) => {
 	const { t } = useTranslation();
-	const joinUs = data.joinUs;
+	const joinUs = data.strapiJoinUs;
 	return (
 		<Layout
 			location={location}

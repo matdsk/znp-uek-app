@@ -31,7 +31,7 @@ const Documents = ({ data, location }) => {
 								<AiFillFileText />
 								<h2>{fileGroup.node.Name}</h2>
 							</div>
-							<ListGroup variant="flush" horizontal>
+							<ListGroup variant="flush">
 								{fileGroup.node.Files.map((file) => (
 									<ListGroup.Item key={file.id}>
 										<a className="c-files__link" href={file.url}>

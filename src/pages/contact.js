@@ -54,12 +54,13 @@ const Contact = ({ data, location }) => {
 					</Col>
 					<Col md={6} className="c-contact__form">
 						<h2 className="mb-3">Skontaktuj się z nami:</h2>
-						<Form name="contact" method="POST" data-netlify="true">
+						<Form name="contact" action="https://formspree.io/f/mrgrnkpp"
+  method="POST">
 							<Form.Group className="mb-3" controlId="email">
 								<Form.Label>
 									<Trans>email</Trans>
 								</Form.Label>
-								<Form.Control type="email" name="email" placeholder="e-mail" />
+								<Form.Control type="email" name="_replyto" placeholder="e-mail" />
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="subject">
 								<Form.Label>

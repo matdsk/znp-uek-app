@@ -60,19 +60,19 @@ const Contact = ({ data, location }) => {
 								<Form.Label>
 									<Trans>email</Trans>
 								</Form.Label>
-								<Form.Control type="email" name="_replyto" placeholder="e-mail" />
+								<Form.Control type="email" name="Email" placeholder="e-mail" />
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="subject">
 								<Form.Label>
 									<Trans>subject</Trans>
 								</Form.Label>
-								<Form.Control type="text" name="subject" placeholder="Temat" />
+								<Form.Control type="text" name="Temat" placeholder="Temat" />
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="message">
 								<Form.Label>
 									<Trans>message</Trans>
 								</Form.Label>
-								<Form.Control as="textarea" name="message" rows={3} />
+								<Form.Control as="textarea" name="Tekst" rows={3} />
 							</Form.Group>
 							<Button variant="primary" type="submit" className="px-5">
 								<Trans>send</Trans>

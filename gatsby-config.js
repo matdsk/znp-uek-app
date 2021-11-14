@@ -83,7 +83,7 @@ module.exports = {
 				],
 				singleTypes: [
 					{
-						name: 'single-type-name',
+						name: 'join-us',
 						api: { qs: {	_locale: 'all' } },
         	},
 				],

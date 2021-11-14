@@ -2,12 +2,14 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
+import ReactMarkdown from 'react-markdown';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import '../styles/join-us.css';
 
 const JoinUs = ({ data, location }) => {
 	const { t } = useTranslation();
+	const joinUs = data.joinUs;
 	return (
 		<Layout
 			location={location}
@@ -21,13 +23,9 @@ const JoinUs = ({ data, location }) => {
 						<h1 className="mb-5">
 							<Trans>join_us</Trans>
 						</h1>
-						<h4 className="mb-3">
-							To, co dzieje się w Twoim miejscu pracy zależy również od Twojego
-							zaangażowania!
-						</h4>
-						<h3>Dołącz do nas!</h3>
-						<h3 className="mb-3">Razem możemy więcej!</h3>
-						<h4>Członkostwo w ZNP</h4>
+						<div className="c-join-us__wyswig">
+							<ReactMarkdown>{joinUs.Content}</ReactMarkdown>
+						</div>
 					</Col>
 				</Row>
 			</Container>
@@ -63,6 +61,9 @@ export const query = graphql`
 					ZipCode
 				}
 			}
+		}
+		joinUs {
+    	Content
 		}
 	}
 `;

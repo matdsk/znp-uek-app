@@ -76,6 +76,14 @@ module.exports = {
 						name: `download-files`,
 						api: { qs: { _locale: `all` } },
 					},
+					{
+						name: `documents`,
+						api: { qs: { _locale: `all` } },
+					},
+					{
+						name: `join-us`,
+						api: { qs: { _locale: `all` } },
+					},
 				],
 			},
 		},

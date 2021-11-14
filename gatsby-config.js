@@ -80,10 +80,12 @@ module.exports = {
 						name: `documents`,
 						api: { qs: { _locale: `all` } },
 					},
+				],
+				singleTypes: [
 					{
-						name: `join-us`,
-						api: { qs: { _locale: `all` } },
-					},
+						name: 'single-type-name',
+						api: { qs: {	_locale: 'all' } },
+        	},
 				],
 			},
 		},

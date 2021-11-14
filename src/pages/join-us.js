@@ -62,7 +62,7 @@ export const query = graphql`
 				}
 			}
 		}
-		joinUs {
+		strapiJoinUs {
     	Content
 		}
 	}

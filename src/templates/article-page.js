@@ -12,8 +12,6 @@ const ArticlePage = ({ data, location }) => {
 
 	return (
 		<Layout
-			location={location}
-			crumbLabel={article.Slug}
 			hideTopbar="true"
 			contactData={data.allStrapiContacts}
 			currentLang={data.locales.edges[0].node.language}

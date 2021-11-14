@@ -10,8 +10,6 @@ const Members = ({ location, data }) => {
 	const defaultActive = data.allStrapiMembers.edges[0].node.Nazwa;
 	return (
 		<Layout
-			location={location}
-			crumbLabel="Członkowie"
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>

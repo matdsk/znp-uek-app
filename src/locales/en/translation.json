@@ -12,5 +12,6 @@
 	"send": "Send",
 	"email": "Email address",
 	"subject": "Subject",
-	"message": "Message"
+	"message": "Message",
+	"documents" : "Documents"
 }

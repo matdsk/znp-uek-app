@@ -38,6 +38,12 @@ const Sidebar = () => {
 					<Trans>download_files</Trans>
 				</span>
 			</Nav.Link>
+			<Nav.Link href="/documents">
+				<BsPlayFill />
+				<span>
+					<Trans>documents</Trans>
+				</span>
+			</Nav.Link>
 			<Nav.Link href="/join-us">
 				<BsPlayFill />
 				<span>

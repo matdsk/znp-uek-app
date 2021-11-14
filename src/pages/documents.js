@@ -8,9 +8,9 @@ import { AiFillFileText } from 'react-icons/ai';
 import { MdFileDownload } from 'react-icons/md';
 import '../styles/files.css';
 
-const Files = ({ data, location }) => {
+const Documents = ({ data, location }) => {
 	const { t } = useTranslation();
-	const downloadFiles = data.allStrapiDownloadFiles.edges;
+	const docs = data.allStrapiDocuments.edges;
 	return (
 		<Layout
 			currentLang={data.locales.edges[0].node.language}
@@ -20,12 +20,12 @@ const Files = ({ data, location }) => {
 				<Row>
 					<Col>
 						<h1 className="mb-5">
-							<Trans>download_files</Trans>
+							<Trans>documents</Trans>
 						</h1>
 					</Col>
 				</Row>
 				<Row>
-					{downloadFiles.map((fileGroup) => (
+					{docs.map((fileGroup) => (
 						<Col key={fileGroup.node.id} className="px-4">
 							<div className="d-flex align-items-center c-files__group">
 								<AiFillFileText />
@@ -52,7 +52,7 @@ const Files = ({ data, location }) => {
 export default Files;
 
 export const query = graphql`
-	query Files($language: String!) {
+	query Documents($language: String!) {
 		locales: allLocale(filter: { language: { eq: $language } }) {
 			edges {
 				node {
@@ -78,7 +78,7 @@ export const query = graphql`
 				}
 			}
 		}
-		allStrapiDownloadFiles(filter: { locale: { eq: $language } }) {
+		allStrapiDocuments(filter: { locale: { eq: $language } }) {
 			edges {
 				node {
 					id

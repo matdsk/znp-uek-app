@@ -11,8 +11,6 @@ import '../styles/breadcrumb.css';
 
 export default function Layout({
 	children,
-	location,
-	crumbLabel,
 	currentLang,
 	hideTopbar,
 	contactData,
@@ -21,15 +19,6 @@ export default function Layout({
 		<div className="layout">
 			{!hideTopbar && <TopBar currentLang={currentLang} />}
 			<PageHeader />
-			{location.pathname !== '/' && location.pathname !== '/en/' && (
-				<Container className="c-breadcrumb mb-4 mt-3">
-					<Breadcrumb
-						location={location}
-						crumbLabel={crumbLabel}
-						crumbSeparator=""
-					/>
-				</Container>
-			)}
 			<div className="content mt-4">{children}</div>
 			<PageFooter data={contactData} />
 		</div>

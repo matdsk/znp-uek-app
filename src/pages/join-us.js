@@ -3,7 +3,9 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
+import ListGroup from 'react-bootstrap/ListGroup';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+import { MdFileDownload } from 'react-icons/md';
 
 import '../styles/join-us.css';
 
@@ -12,8 +14,6 @@ const JoinUs = ({ data, location }) => {
 	const joinUs = data.strapiJoinUs;
 	return (
 		<Layout
-			location={location}
-			crumbLabel={t('join_us')}
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>
@@ -26,6 +26,16 @@ const JoinUs = ({ data, location }) => {
 						<div className="c-join-us__wyswig">
 							<ReactMarkdown>{joinUs.Content}</ReactMarkdown>
 						</div>
+						<ListGroup variant="flush">
+							{joinUs.File.map((file) => (
+								<ListGroup.Item key={file.id}>
+									<a className="c-files__link" href={file.url}>
+										<MdFileDownload />
+										{file.name}
+									</a>
+								</ListGroup.Item>
+							))}
+						</ListGroup>
 					</Col>
 				</Row>
 			</Container>
@@ -64,6 +74,11 @@ export const query = graphql`
 		}
 		strapiJoinUs {
     	Content
+			File {
+				id
+				url
+				name
+			}
 		}
 	}
 `;

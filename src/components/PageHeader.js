@@ -84,6 +84,12 @@ export default function PageHeader() {
 								</Link>
 							</Nav.Item>
 							<Nav.Item as="li">
+								<Link to="/documents" className="nav-link" activeClassName="active">
+									<BsPlay />
+									<Trans>documents</Trans>
+								</Link>
+							</Nav.Item>
+							<Nav.Item as="li">
 								<Link
 									to="/join-us"
 									className="nav-link"

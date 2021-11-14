@@ -12,8 +12,6 @@ const Contact = ({ data, location }) => {
 	const { t } = useTranslation();
 	return (
 		<Layout
-			location={location}
-			crumbLabel={t('contact')}
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>

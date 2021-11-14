@@ -13,8 +13,6 @@ export default function Gallery({ data, pageContext, location }) {
 	const [selectedImg, setSelectedImg] = useState(null);
 	return (
 		<Layout
-			location={location}
-			crumbLabel="Galeria"
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>

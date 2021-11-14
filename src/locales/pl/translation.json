@@ -12,5 +12,6 @@
 	"send": "Wyślij",
 	"email": "Adres email",
 	"subject": "Temat",
-	"message": "Treść"
+	"message": "Treść",
+	"documents" : "Dokumenty"
 }

@@ -11,8 +11,6 @@ import { graphql } from 'gatsby';
 const Home = ({ data, location }) => {
 	return (
 		<Layout
-			location={location}
-			crumbLabel=""
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>

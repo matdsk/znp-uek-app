@@ -9,8 +9,6 @@ import '../styles/not-found.css';
 const NotFoundPage = ({ data, location }) => {
 	return (
 		<Layout
-			location={location}
-			crumbLabel="404"
 			currentLang={data.locales.edges[0].node.language}
 			contactData={data.allStrapiContacts}
 		>

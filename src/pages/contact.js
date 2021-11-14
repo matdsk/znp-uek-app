@@ -55,25 +55,25 @@ const Contact = ({ data, location }) => {
 					</Col>
 					<Col md={6} className="c-contact__form">
 						<h2 className="mb-3">Skontaktuj się z nami:</h2>
-						<Form name="contact" action="https://formspree.io/f/mrgrnkpp"
+						<Form name="contact" action="https://submit-form.com/9zGJEzEZ"
   method="POST">
 							<Form.Group className="mb-3" controlId="email">
 								<Form.Label>
 									<Trans>email</Trans>
 								</Form.Label>
-								<Form.Control type="email" name="Email" placeholder="e-mail" />
+								<Form.Control type="email" name="Email" placeholder="e-mail" required=""/>
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="subject">
 								<Form.Label>
 									<Trans>subject</Trans>
 								</Form.Label>
-								<Form.Control type="text" name="Temat" placeholder="Temat" />
+								<Form.Control type="text" name="Temat" placeholder="Temat" required=""/>
 							</Form.Group>
 							<Form.Group className="mb-3" controlId="message">
 								<Form.Label>
 									<Trans>message</Trans>
 								</Form.Label>
-								<Form.Control as="textarea" name="Tekst" rows={3} />
+								<Form.Control as="textarea" name="Tekst" rows={3} required=""/>
 							</Form.Group>
 							<Button variant="primary" type="submit" className="px-5">
 								<Trans>send</Trans>

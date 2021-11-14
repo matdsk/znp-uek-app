@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Layout from '../components/Layout';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { AiOutlinePhone, AiOutlineMail } from 'react-icons/ai';
@@ -10,6 +11,13 @@ import '../styles/contact.css';
 const Contact = ({ data, location }) => {
 	const contactData = data.allStrapiContacts.edges;
 	const { t } = useTranslation();
+
+	let history = useHistory();
+
+  const redirect = () => {
+    history.push('/')
+  }
+
 	return (
 		<Layout
 			currentLang={data.locales.edges[0].node.language}
@@ -74,7 +82,7 @@ const Contact = ({ data, location }) => {
 								</Form.Label>
 								<Form.Control as="textarea" name="Tekst" rows={3} />
 							</Form.Group>
-							<Button variant="primary" type="submit" className="px-5">
+							<Button variant="primary" type="submit" onClick={redirect} className="px-5">
 								<Trans>send</Trans>
 							</Button>
 						</Form>

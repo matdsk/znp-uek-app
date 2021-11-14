@@ -49,7 +49,7 @@ const Documents = ({ data, location }) => {
 	);
 };
 
-export default Files;
+export default Documents;
 
 export const query = graphql`
 	query Documents($language: String!) {
